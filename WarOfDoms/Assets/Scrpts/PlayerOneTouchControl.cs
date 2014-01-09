@@ -26,10 +26,10 @@ public class PlayerOneTouchControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		myPosition = myTransform.position;
-		myPosition.z = 5;
-		myTransform.position = Vector2.MoveTowards(myPosition,myDestination,mySpeed*Time.deltaTime);
-		
+
+
+
+
 		//ist ein touch am screen?
 		//wenn keine touches sind,
 		//Debug.DrawLine(new Vector3(0, Screen.height/2, 0), new Vector3(Screen.width, Screen.height/2, 0), Color.red);
@@ -38,12 +38,15 @@ public class PlayerOneTouchControl : MonoBehaviour {
 		//Debug.Log("myDestination"+myDestination);
 		if(Input.touchCount > 0){
 			for(int i = 0; i < Input.touchCount; i++){
+				fingerPos = Input.GetTouch (i).position;
+				fingerPos.z = 5;
 				if(Input.GetTouch(i).position.y > (Screen.height/2 - 100)){
-					fingerPos = Input.GetTouch (i).position;
-					fingerPos.z = 5;
 					myDestination = Camera.main.ScreenToWorldPoint (fingerPos);
 				}
-			}		
+			}	
+			myPosition = myTransform.position;
+			myPosition.z = 5;
+			myTransform.position = Vector2.MoveTowards(myPosition,myDestination,mySpeed*Time.deltaTime);
 		}
 	}
 }

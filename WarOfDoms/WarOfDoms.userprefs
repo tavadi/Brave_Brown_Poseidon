@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scrpts\PlayerTwoTouchControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scrpts\RocketScript.cs">
     <Files>
-      <File FileName="Assets\Scrpts\PlayerOneTouchControl.cs" Line="40" Column="61" />
-      <File FileName="Assets\Scrpts\PlayerTwoTouchControl.cs" Line="41" Column="60" />
+      <File FileName="Assets\Scrpts\PlayerOneTouchControl.cs" Line="46" Column="6" />
+      <File FileName="Assets\Scrpts\PlayerTwoTouchControl.cs" Line="42" Column="3" />
+      <File FileName="Assets\Scrpts\RocketScript.cs" Line="9" Column="32" />
+      <File FileName="Assets\Scrpts\TouchLogic.cs" Line="33" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

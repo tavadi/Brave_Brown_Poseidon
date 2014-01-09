@@ -8,6 +8,7 @@ public class PlayerTwoTouchControl : MonoBehaviour {
 	private Vector3 fingerPos;
 	private float mySpeed = 10f;
 	public Rigidbody2D myRocket;
+	public GUITexture myShootButton;
 	// Use this for initialization
 	void Start () {
 		myTransform = transform;
@@ -38,7 +39,12 @@ public class PlayerTwoTouchControl : MonoBehaviour {
 		//Debug.Log("myDestination"+myDestination);
 		if(Input.touchCount > 0){
 			for(int i = 0; i < Input.touchCount; i++){
-				if(Input.GetTouch(i).position.y < Screen.height/2 - 100){
+				if(myShootButton != null && (myShootButton.HitTest(Input.GetTouch(i).position)))
+				{
+					Debug.Log ("pushed");
+					ShootTo();
+				}
+				else if(Input.GetTouch(i).position.y < Screen.height/2 - 100){
 					fingerPos = Input.GetTouch (i).position;
 					fingerPos.z = 5;
 					myDestination = Camera.main.ScreenToWorldPoint (fingerPos);
